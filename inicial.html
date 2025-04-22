@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>As Escolhas com Fellipe</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-animation"></div>
+    <div class="floating-hearts"></div>
+    
+    <div id="initial-container">
+        <div class="initial-content">
+            <h1 class="title-animation">As Escolhas com Fellipe</h1>
+            <div class="initial-text">
+                <p class="fade-in">Em meados de 2022...</p>
+                <p class="fade-in delay-1">Uma história de amor está prestes a começar.</p>
+                <p class="fade-in delay-2">Cada decisão irá moldar esse romance.</p>
+            </div>
+            <a href="jogo.html" class="pulse-btn heartbeat">Iniciar Aventura</a>
+        </div>
+    </div>
+
+    <script>
+        // Cria corações flutuantes
+        function createHearts() {
+            const container = document.querySelector('.floating-hearts');
+            for (let i = 0; i < 15; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'heart';
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.animationDuration = 5 + Math.random() * 10 + 's';
+                heart.style.animationDelay = Math.random() * 5 + 's';
+                container.appendChild(heart);
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', createHearts);
+    </script>
+</body>
+</html>
